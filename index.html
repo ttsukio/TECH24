@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tacos and Burgers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9edb5;
+            text-align: center;
+        }
+        h1 {
+            color: #ff6347; /* Tomato red for a taco theme */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #tacoButton {
+            background-color: #ffd700; /* Gold for taco button */
+            color: #333;
+        }
+        #burgerButton {
+            background-color: #8b4513; /* Saddle brown for burger button */
+            color: #fff;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        #tacoImage, #burgerImage {
+            display: none;
+            margin-left: auto;
+            margin-right: auto;
+            width: 30%;
+            height: 30%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tacos or Burgers?</h1>
+    <button id="tacoButton">Taco</button>
+    <button id="burgerButton">Burger</button>
+
+    <img id="tacoImage" src="tac.webp" alt="Taco Image">
+    <img id="burgerImage" src="burg.png" alt="Burger Image">
+
+    <script>
+        var tacoButton = document.getElementById("tacoButton");
+        var burgerButton = document.getElementById("burgerButton");
+        var tacoImage = document.getElementById("tacoImage");
+        var burgerImage = document.getElementById("burgerImage");
+
+        tacoButton.addEventListener("click", function() {
+            alert("Free Tacos!")
+            tacoImage.style.display = "block";
+            burgerImage.style.display = "none";
+        });
+
+        burgerButton.addEventListener("click", function() {
+            alert("Free Burgers!")
+            burgerImage.style.display = "block";
+            tacoImage.style.display = "none";
+        });
+    </script>
+</body>
+</html>
